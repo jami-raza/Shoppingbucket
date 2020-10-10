@@ -1,10 +1,12 @@
 import React from 'react';
-
-
+import Products from './Components/Products';
+import Basket from './Components/Basket'
 function App() {
   return (
     <div className="App">
-      Lets create Shopping Basket with Redux toolkit
+      
+      <Products/>
+      <Basket/>
     </div>
   );
 }
