@@ -2,26 +2,94 @@ import { ProductItem } from './global'
 
   const INITIAL_STATE: ProductItem[] = [
     {
-      id: "123",
-      title: "Blue t-shirt",
+      id: "1",
+      title: "Nike",
       description: "No fancy sizing charts here, one t-shirt size to rule them all",
       imageUrl: "https://www.pngitem.com/pimgs/m/244-2441637_campus-shoes-png-transparent-png.png",
-      price: 399
+      price: 399,
+      quantity:0
     },
     {
-      id: "456",
-      title: "Yellow t-shirt",
+      id: "2",
+      title: "Addidas",
       description: "This unique t-shirt is guaranteed to fit nobody, not even new born babies",
       imageUrl: "https://www.freepngimg.com/thumb/shoes/28530-3-nike-shoes-transparent.png",
-      price: 499
+      price: 499,
+      quantity:0
     },
     {
-      id: "789",
-      title: "Red t-shirt",
+      id: "3",
+      title: "Mocassion",
       description: "The only product on our site that might actually be worth buying",
       imageUrl: "https://www.freepngimg.com/thumb/shoes/3-2-shoes-transparent.png",
-      price: 799
-    }
+      price: 799,
+      quantity:0
+    },
+    {
+      id: "4",
+      title: "Nike Air Max",
+      description: "The only product on our site that might actually be worth buying",
+      imageUrl: "https://www.freepngimg.com/thumb/shoes/26170-4-vector-shoes-image.png",
+      price: 799,
+      quantity:0
+    },
+    {
+      id: "5",
+      title: "Docker",
+      description: "The only product on our site that might actually be worth buying",
+      imageUrl: "https://www.freepngimg.com/thumb/shoes/21849-6-dock-shoes-thumb.png",
+      price: 799,
+      quantity:0
+    },
+    {
+      id: "6",
+      title: "Nike",
+      description: "The only product on our site that might actually be worth buying",
+      imageUrl: "https://www.freepngimg.com/thumb/shoes/55557-2-sneakers-photos-free-clipart-hd-thumb.png",
+      price: 799,
+      quantity:0
+    },
+    {
+      id: "7",
+      title: "Jordan",
+      description: "The only product on our site that might actually be worth buying",
+      imageUrl: "https://www.freepngimg.com/thumb/shoes/55552-7-sneakers-image-free-hd-image-thumb.png",
+      price: 799,
+      quantity:0
+    },
+    {
+      id: "8",
+      title: "ASICS",
+      description: "The only product on our site that might actually be worth buying",
+      imageUrl: "https://www.freepngimg.com/thumb/shoes/55565-3-sneakers-picture-free-hd-image-thumb.png",
+      price: 799,
+      quantity:0
+    },
+    {
+      id: "9",
+      title: "Skechers",
+      description: "The only product on our site that might actually be worth buying",
+      imageUrl: "https://www.freepngimg.com/thumb/shoes/55532-3-sneakers-hd-image-free-png-thumb.png",
+      price: 799,
+      quantity:0
+    },
+    {
+      id: "10",
+      title: "Bata",
+      description: "The only product on our site that might actually be worth buying",
+      imageUrl: "https://www.freepngimg.com/thumb/shoes/55568-8-sneakers-hd-free-transparent-image-hd-thumb.png",
+      price: 799,
+      quantity:0
+    },
+    {
+      id: "11",
+      title: "Nike Air Max Pink",
+      description: "The only product on our site that might actually be worth buying",
+      imageUrl: "https://png.pngitem.com/pimgs/s/1-16773_women-casual-shoes-png-transparent-image-png-photo.png",
+      price: 799,
+      quantity:0
+    },
+
   ]
   
   export { INITIAL_STATE }

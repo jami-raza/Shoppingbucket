@@ -1,9 +1,10 @@
 import React from 'react';
 import Products from './Components/Products';
 import Basket from './Components/Basket'
+import './App.css';
 function App() {
   return (
-    <div className="App">
+    <div>
       
       <Products/>
       <Basket/>

@@ -13,7 +13,8 @@ const basketSlice = createSlice({
 
                 return{
                     ...item,
-                    added: true
+                    added: true,
+                    quantity: item.quantity + 1
                 }
             })
         },
@@ -22,14 +23,47 @@ const basketSlice = createSlice({
                 if (item.id !== action.payload.id){
                     return item
                 }
+                else if(item.quantity <= 1){
 
                 return{
                     ...item,
-                    added:false
+                    added:false,
+                    quantity: 0
+                }
+            }
+            return{
+                ...item,
+                quantity: item.quantity - 1
+
+            }
+
+            })
+        },
+        clear: (state, action) => {
+            return state.map(item => {
+                if (item.id !== action.payload.id) {
+                    return item
+                }
+
+                return {
+                    ...item,
+                    quantity: 0,
+                    added: false,
+                }
+            })
+        },
+        addquantity:(state,action)=>{
+            return state.map(item =>{
+                if (item.id !== action.payload.id){
+                    return item
+                }
+                return{
+                    ...item,
+                    quantity: item.quantity +1
                 }
             })
         }
     }
 })
-export const {add, remove} = basketSlice.actions
+export const {add, remove,addquantity,clear} = basketSlice.actions
 export {basketSlice}

@@ -1,13 +1,11 @@
-import React from 'react'
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box'
+import React,{useState} from 'react'
 import Button from '@material-ui/core/Button'
-import Typography from '@material-ui/core/Typography'
 import { makeStyles } from '@material-ui/core/styles';
 import {useSelector} from 'react-redux'
 import {ProductItem} from '../global'
 import {add} from '../Store/Reducer';
 import {store} from '../Store/Store'
+
 const useStyles = makeStyles({
     root: {
       minWidth: 275,
@@ -30,43 +28,52 @@ const useStyles = makeStyles({
   });
 
  const Products = () => {
-    
+    const [search, setSearch] = useState('')
     const classes = useStyles();
     const products = useSelector((state: ProductItem[]) => state)
-    const shoe = products.map((shoe,i) =>{
+    
+  const filterProducts = products.filter(product =>{
+    return product.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+  })
+
+
+    
     
     return(
-        
-         <Grid container spacing={3}>   
-            
-            
-        
-         <Grid item xs={6} sm={3} key={i}>
-            <Box p={1} m={1}>
-                <img src={shoe.imageUrl} className={classes.media}/>
-                <Typography component="h2" variant="h5">
-                    {shoe.title}
-                </Typography>
-                <Typography component="h2" variant="h5">
-                   {shoe.description}
-                </Typography>
+      <div>
+        <input type="text" placeholder="Search items" onChange={e => setSearch(e.target.value)}/>
+        <div className="main">
+          
+        {filterProducts.map((product: ProductItem)=>
+         <div  className="card" key={product.id}>
+            <div className="imgBx" >
+                <img src={product.imageUrl} className={classes.media}/>
+                </div>
+                <div className="contentBx" >
+                <h3>
+                    {product.title}
+                </h3>
+                
+                <h2 className="price">
+                   {product.price}
+                </h2>
+                <div className="buy">
                 <Button 
-                disabled={shoe.added}
-                onClick={()=> store.dispatch(add(shoe))}
+                disabled={product.added}
+                onClick={()=> store.dispatch(add(product))}
                 >
                     Add to basket
                 </Button>
-            </Box>
+                </div>
+                </div>
 
-         </Grid> 
-        
-        </Grid>
+         </div> 
+         )}
+        </div>
+        </div>
+       
     )
-})
-return(
-    <div>
-        {shoe}
-    </div>
-)
+
+
 }
 export default Products;
