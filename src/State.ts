@@ -5,7 +5,7 @@ import { ProductItem } from './global'
       id: "1",
       title: "Nike",
       description: "No fancy sizing charts here, one t-shirt size to rule them all",
-      imageUrl: "https://www.pngitem.com/pimgs/m/244-2441637_campus-shoes-png-transparent-png.png",
+      imageUrl: "http://www.pngmart.com/files/13/Converse-Shoes-Background-PNG.png",
       price: 399,
       quantity:0
     },
@@ -21,7 +21,7 @@ import { ProductItem } from './global'
       id: "3",
       title: "Mocassion",
       description: "The only product on our site that might actually be worth buying",
-      imageUrl: "https://www.freepngimg.com/thumb/shoes/3-2-shoes-transparent.png",
+      imageUrl: "http://www.pngmart.com/files/13/Converse-Shoes-Transparent-Background.png",
       price: 799,
       quantity:0
     },
@@ -85,7 +85,7 @@ import { ProductItem } from './global'
       id: "11",
       title: "Nike Air Max Pink",
       description: "The only product on our site that might actually be worth buying",
-      imageUrl: "https://png.pngitem.com/pimgs/s/1-16773_women-casual-shoes-png-transparent-image-png-photo.png",
+      imageUrl: "http://www.pngmart.com/files/6/Shoe-PNG-Transparent-Picture.png",
       price: 799,
       quantity:0
     },

@@ -15,6 +15,13 @@ body
     background: #09161d;
     
 }
+.input{
+    background-color:#122936;
+    color: #fff;
+    padding: 10px 10px 10px 10px ; 
+    margin-top: 50px;
+    margin-left: 40px;     
+}
 .main{
   display: flex;
   flex-direction: row;
@@ -22,6 +29,7 @@ body
   margin: 50px 20px 20px 20px;
   
 }
+
 .card
 {
     position: relative;
@@ -123,3 +131,67 @@ body
     top: 0;
     opacity: 1;
 }
+.container {
+    margin: auto;
+    width: 80%;
+}
+.nav {
+    padding: 20px 0 40px 0;
+    background: #09161d;
+    font-size: 16px;
+}  
+ .navbar-left {
+      float: left;
+    }
+    
+   .navbar-right {
+      float: right;
+    }
+.nav .ul {
+        display: inline;
+        padding-left: 20px;
+        list-style: none;
+      }
+.nav .li{
+    position: relative;
+  list-style: none;
+}      
+.navbar-right:hover {
+  color: black;
+ }
+.logo{
+    position: relative;
+    font-size: 5em;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(to bottom, #222 0%,#222 50%,#111 100%, #111 100%);
+    background-clip: unset;
+    -webkit-background-clip: text;
+}  
+.logo::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: -1;
+    background: linear-gradient(45deg,#ff0,#0f0,#f00,#00f,#0f0);
+    background-clip: unset;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.logo::after
+{
+    content: attr(data-text);
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    z-index: -2;
+    background: linear-gradient(45deg,#ff0,#0f0,#f00,#00f,#0f0);
+    background-clip: unset;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: blur(20px);
+}
+  
+  

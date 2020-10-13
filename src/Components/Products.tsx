@@ -22,7 +22,7 @@ const useStyles = makeStyles({
       marginBottom: 12,
     },
     media:{
-        height:140,
+        height:200,
         width:200,
     },
   });
@@ -32,22 +32,22 @@ const useStyles = makeStyles({
     const classes = useStyles();
     const products = useSelector((state: ProductItem[]) => state)
     
-  const filterProducts = products.filter(product =>{
-    return product.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())
-  })
+   const filterProducts = products.filter(product =>{
+      return product.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+    })
 
 
     
     
     return(
       <div>
-        <input type="text" placeholder="Search items" onChange={e => setSearch(e.target.value)}/>
+        <input type="text" placeholder="Search items" onChange={e => setSearch(e.target.value)} className="input"/>
         <div className="main">
           
         {filterProducts.map((product: ProductItem)=>
          <div  className="card" key={product.id}>
             <div className="imgBx" >
-                <img src={product.imageUrl} className={classes.media}/>
+                <img alt={product.title} src={product.imageUrl} className={classes.media}/>
                 </div>
                 <div className="contentBx" >
                 <h3>
@@ -76,4 +76,5 @@ const useStyles = makeStyles({
 
 
 }
+
 export default Products;
