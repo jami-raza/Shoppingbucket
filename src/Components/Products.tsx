@@ -32,6 +32,9 @@ const useStyles = makeStyles({
     const classes = useStyles();
     const products = useSelector((state: ProductItem[]) => state)
     
+    //Serching items 
+
+
    const filterProducts = products.filter(product =>{
       return product.title.toLocaleLowerCase().includes(search.toLocaleLowerCase())
     })
